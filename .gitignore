@@ -1,18 +1,254 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+clear
+BYPAS64()
+{
+clear
+echo "\033[1;37m______________________________________________  \033[0m"
+echo "\033[1;37m                \033[41m YouTube  : SAHRUL MNZ 2  \033[0m"
+echo "\033[1;37m                \033[41m Telegram : @channelMNZ   \033[0m"
+echo "\033[1;37m______________________________________________  \033[0m"
+date
+data=/data/data/$PK
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                      WAIT........."
+echo "\033[1;37m______________________________________________  \033[0m"
+eval `pm dump $PK | grep LibraryDir`
+lib=$legacyNativeLibraryDir
+arm=$(ls $lib | grep arm)
+lib=$lib/$arm
 
-# Other files and folders
-.settings/
+rm -rf /cache/magisk.log*
+rm -rf /data/dalvik-cache/*
+rm -rf /data/data/*/cache/*
+rm -rf /data/media/0/Android/data/*/cache
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+rm -rf $data/{app*,files}
+touch $data/{app_bugly,app_crashrecord,files}
+chmod 4000 $data/{app_bugly,app_crashrecord,files}
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+cp $lib/libUE4.so $lib/libUE4.so.bak
+am start -n $PK/com.epicgames.ue4.SplashActivity &> /dev/null
+sleep 10
+rm -rf $lib/libUE4.so
+mv $lib/libUE4.so.bak $lib/libUE4.so
+chmod 755 $lib/*
+X=$(grep -n $PK /data/system/users/0/settings_ssaid.xml | grep -o 'value="[a-zA-Z0-9]*"*' | cut -d '"' -f2)
+Xx=$(head -3 /dev/urandom | tr -cd 'a-z0-9' | cut -c -16)
+sed -i "s/$X/$Xx/g" /data/system/users/0/settings_ssaid.xml
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                      DONE "
+echo "\033[1;37m______________________________________________  \033[0m"
+su -lp 2000 -c "cmd notification post -S bigtext -t 'BYPASS SHELL ACTIVE 64 BIT' 'Tag' 'YouTube : SAHRUL MNZ 2 , Telegram : @channelMNZ' " &> /dev/null
+}
+LESS() {
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m                 \033[41m  YT : SAHRUL MNZ 2  \033[0m"
+echo "\033[1;37m                 \033[41m  Tele : @channelMNZ  \033[0m"
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                      WAIT........."
+echo "\033[1;37m______________________________________________  \033[0m"
+MNZ=/data/data
+cp .MNZFUNCTION $MNZ/;
+chmod 777 $MNZ/.MNZFUNCTION
+su -c /data/data/.MNZFUNCTION 1
+rm -rf $MNZ/.MNZFUNCTION
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                       DONE"
+echo "\033[1;37m______________________________________________  \033[0m"
+}
+SMALL() {
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m                 \033[41m  YT : SAHRUL MNZ 2  \033[0m"
+echo "\033[1;37m                 \033[41m  Tele : @channelMNZ  \033[0m"
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                      WAIT........."
+echo "\033[1;37m______________________________________________  \033[0m"
+MNZ=/data/data
+cp .MNZFUNCTION $MNZ/;
+chmod 777 $MNZ/.MNZFUNCTION
+su -c /data/data/.MNZFUNCTION 2
+rm -rf $MNZ/.MNZFUNCTION
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                       DONE"
+echo "\033[1;37m______________________________________________  \033[0m"
+}
+AIMBOT() {
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m                 \033[41m  YT : SAHRUL MNZ 2  \033[0m"
+echo "\033[1;37m                 \033[41m  Tele : @channelMNZ  \033[0m"
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                      WAIT........."
+echo "\033[1;37m______________________________________________  \033[0m"
+MNZ=/data/data
+cp .MNZFUNCTION $MNZ/;
+chmod 777 $MNZ/.MNZFUNCTION
+su -c /data/data/.MNZFUNCTION 3
+rm -rf $MNZ/.MNZFUNCTION
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                       DONE"
+echo "\033[1;37m______________________________________________  \033[0m"
+}
+NOFOG() {
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m                 \033[41m  YT : SAHRUL MNZ 2  \033[0m"
+echo "\033[1;37m                 \033[41m  Tele : @channelMNZ  \033[0m"
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                      WAIT........."
+echo "\033[1;37m______________________________________________  \033[0m"
+MNZ=/data/data
+cp .MNZFUNCTION $MNZ/;
+chmod 777 $MNZ/.MNZFUNCTION
+su -c /data/data/.MNZFUNCTION 4
+rm -rf $MNZ/.MNZFUNCTION
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                       DONE"
+echo "\033[1;37m______________________________________________  \033[0m"
+}
+HIT() {
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m                 \033[41m  YT : SAHRUL MNZ 2  \033[0m"
+echo "\033[1;37m                 \033[41m  Tele : @channelMNZ  \033[0m"
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                      WAIT........."
+echo "\033[1;37m______________________________________________  \033[0m"
+MNZ=/data/data
+cp .MNZFUNCTION $MNZ/;
+chmod 777 $MNZ/.MNZFUNCTION
+su -c /data/data/.MNZFUNCTION 5
+rm -rf $MNZ/.MNZFUNCTION
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                       DONE"
+echo "\033[1;37m______________________________________________  \033[0m"
+}
+ALLFITURE() {
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m                 \033[41m  YT : SAHRUL MNZ 2  \033[0m"
+echo "\033[1;37m                 \033[41m  Tele : @channelMNZ  \033[0m"
+echo "\033[1;37m                _______________________  \033[0m"
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                      WAIT........."
+echo "\033[1;37m______________________________________________  \033[0m"
+MNZ=/data/data
+cp .MNZFUNCTION $MNZ/;
+chmod 777 $MNZ/.MNZFUNCTION
+su -c /data/data/.MNZFUNCTION 1
+su -c /data/data/.MNZFUNCTION 2
+su -c /data/data/.MNZFUNCTION 3
+su -c /data/data/.MNZFUNCTION 4
+su -c /data/data/.MNZFUNCTION 5
+rm -rf $MNZ/.MNZFUNCTION
+echo "\033[1;37m______________________________________________  \033[0m"
+echo ""
+echo "                       DONE"
+echo "\033[1;37m______________________________________________  \033[0m"
+}
+
+clear
+echo ""
+echo ""
+echo ""
+echo "\033[1;37m ___________________________________  \033[0m"
+echo -n "  Date&Time    : "
+date "+%a %d %b %Y %Z %H :%M :%S"
+sleep 0.1
+echo -n "  Time Zone    : "
+getprop persist.sys.timezone
+sleep 0.2
+echo -n "  GSM Operator : "
+getprop gsm.operator.alpha
+sleep 0.3
+echo -n "  ISO Country  : "
+getprop gsm.operator.iso-country
+sleep 0.4
+echo -n "  Device Brand : "
+getprop ro.product.brand
+sleep 0.5
+echo -n "  Device Model : "
+getprop ro.product.model "\e[0m"
+sleep 0.6
+echo "\033[1;37m ___________________________________  \033[0m"
+sleep 1
+printf "
+\033[1;37m ___________________________________  \033[0m
+\033[1;37m \033[41m YouTube  : SAHRUL MNZ 2  \033[0m
+\033[1;37m \033[41m Telegram : @channelMNZ   \033[0m
+\033[1;37m ___________________________________  \033[0m
+\033[1;37m \033[41m BYPASS PUBG 1.8 \033[0m
+\033[1;37m \033[41m SUPPORT 64 / 32 BIT \033[0m
+\033[1;37m ___________________________________  \033[0m
+Select Version:
+\033[1;37m ___________________________________  \033[0m
+   BYPASS 
+\033[1;37m ___________________________________  \033[0m
+1) GLOBAL
+2) KOREA
+3) VN
+4) TW
+5) BGMI
+\033[1;37m ___________________________________  \033[0m
+   LOBY OR IN GAME
+\033[1;37m ___________________________________  \033[0m
+6) LESS RECOILL
+7) CROSSHAIR
+8) AIM LOCK 50M
+9) NO FOG
+10) HIGH DAMAGE
+11) ONE KLIK ALL FITURE
+\033[1;37m ___________________________________  \033[0m
+Input Number:"
+read -s PK
+if [ $PK == 1 ] ;then
+PK="com.tencent.ig"
+BYPAS64
+fi
+if [ $PK == 2 ] ;then
+PK="com.pubg.krmobile"
+BYPAS64
+fi
+if [ $PK == 3 ] ;then
+PK="com.vng.pubgmobile"
+BYPAS64
+fi
+if [ $PK == 4 ] ;then
+PK="com.rekoo.pubgm"
+BYPAS64
+fi
+if [ $PK == 5 ] ;then
+PK="com.pubg.imobile"
+BYPAS64
+fi
+if [ $PK == 6 ] ;then
+LESS
+fi
+if [ $PK == 7 ] ;then
+SMALL
+fi
+if [ $PK == 8 ] ;then
+AIMBOT
+fi
+if [ $PK == 9 ] ;then
+NOFOG
+fi
+if [ $PK == 10 ] ;then
+HIT
+fi
+if [ $PK == 11 ] ;then
+ALLFITURE
+fi
